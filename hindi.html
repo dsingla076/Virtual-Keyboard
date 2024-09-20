@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi Virtual Keyboard</title>
+    <link rel="stylesheet" href="hindi.css">
+
+</head>
+<body>
+    <textarea id="output" class="textarea"></textarea>
+    
+    <div class="container">
+        <div class="first row">
+            <button onclick="appendCharacter('~')">~</button>
+            <button onclick="appendCharacter('1')">1</button>
+            <button onclick="appendCharacter('2')">2</button>
+            <button onclick="appendCharacter('3')">3</button> 
+            <button onclick="appendCharacter('4')">4</button>
+            <button onclick="appendCharacter('5')">5</button>
+            <button onclick="appendCharacter('6')">6</button>
+            <button onclick="appendCharacter('7')">7</button>
+            <button onclick="appendCharacter('8')">8</button>
+            <button onclick="appendCharacter('9')">9</button>
+            <button onclick="appendCharacter('0')">0</button>
+            <button onclick="appendCharacter('-')">-</button>
+            <button onclick="appendCharacter('=')">=</button>
+            <button class="back" onclick="appendCharacterBackspace()">Backspace</button>
+        <div class="second row">
+        <button class="tab" onclick="appendCharacter('tab')">Tab</button>
+        <button onclick="appendCharacter('अ')">अ</button>
+        <button onclick="appendCharacter('आ')">आ</button>
+        <button onclick="appendCharacter('इ')">इ</button>
+        <button onclick="appendCharacter('ई')">ई</button>
+        <button onclick="appendCharacter('उ')">उ</button>
+        <button onclick="appendCharacter('ऊ')">ऊ</button>
+        <button onclick="appendCharacter('ऋ')">ऋ</button>
+        <button onclick="appendCharacter('ए')">ए</button>
+        <button onclick="appendCharacter('ऐ')">ऐ</button>
+        <button onclick="appendCharacter('ओ')">ओ</button>
+        <button onclick="appendCharacter('[')">[</button>
+        <button onclick="appendCharacter(']')">]</button>
+        <button class="slash" onclick="appendCharacter('/')">\</button>
+    </div>
+    <div class="third row">
+        <button class="cap" onclick="appendCharacter('caps')">Caps</button>
+        <button onclick="appendCharacter('क')">क</button>
+        <button onclick="appendCharacter('ख')">ख</button>
+        <button onclick="appendCharacter('ग')">ग</button>
+        <button onclick="appendCharacter('घ')">घ</button>
+        <button onclick="appendCharacter('ङ')">ङ</button>
+        <button onclick="appendCharacter('च')">च</button>
+        <button onclick="appendCharacter('छ')">छ</button>
+        <button onclick="appendCharacter('ज')">ज</button>
+        <button onclick="appendCharacter('झ')">झ</button>
+        <button onclick="appendCharacter('ञ')">ञ</button>
+        <button onclick="appendCharacter(';')">;</button>
+        <button onclick="appendCharacter('\'')">'</button>
+        <button class="etn" onclick="appendCharacterEnter()">Enter</button>
+    </div>
+    <div class="fourth row">
+        <button class="leftshift" onclick="toggleShift()">Shift</button>
+        <button onclick="appendCharacter('ट')">ट</button>
+        <button onclick="appendCharacter('ठ')">ठ</button>
+        <button onclick="appendCharacter('ड')">ड</button>
+        <button onclick="appendCharacter('ढ')">ढ</button>
+        <button onclick="appendCharacter('ण')">ण</button>
+        <button onclick="appendCharacter('त')">त</button>
+        <button onclick="appendCharacter('थ')">थ</button>
+        <button onclick="appendCharacter('द')">द</button>
+        <button onclick="appendCharacter('ध')">ध</button>
+        <button onclick="appendCharacter('न')">न</button>
+        <button onclick="appendCharacter(',')">,</button>
+        <button onclick="appendCharacter('.')">.</button>
+        <button class="rightshift" onclick="toggleShift()">Shift</button>
+
+    </div>
+    <div class="fifth row">
+         <button onclick="appendCharacter('प')">प</button>
+        <button onclick="appendCharacter('फ')">फ</button>
+        <button onclick="appendCharacter('ब')">ब</button>
+        <button onclick="appendCharacter('भ')">भ</button>
+        <button onclick="appendCharacter('म')">म</button>
+        <button onclick="appendCharacter('य')">य</button>
+        <button onclick="appendCharacter('र')">र</button>
+        <button onclick="appendCharacter('ल')">ल</button>
+        <button onclick="appendCharacter('व')">व</button>
+        <button onclick="appendCharacter('श')">श</button>
+    </div>
+    <div class="six row">
+        <button onclick="appendCharacter('ष')">ष</button>
+        <button onclick="appendCharacter('स')">स</button>
+        <button onclick="appendCharacter('ह')">ह</button>
+        <button onclick="appendCharacter('क्ष')">क्ष</button>
+        <button onclick="appendCharacter('त्र')">त्र</button>
+        <button onclick="appendCharacter('ज्ञ')">ज्ञ</button>
+        <button onclick="appendCharacter('ॐ')">ॐ</button>
+        <button onclick="appendCharacter('अं')">अं</button>
+        <button onclick="appendCharacter('अः')">अः</button>
+        <button onclick="appendCharacter('।')">।</button>
+    </div>
+    <div class="seven row">
+        <button onclick="appendCharacter('ा')">ा</button>
+        <button onclick="appendCharacter('ि')">ि</button>
+        <button onclick="appendCharacter('ी')">ी</button>
+        <button onclick="appendCharacter('ु')">ु</button>
+        <button onclick="appendCharacter('ू')">ू</button>
+        <button onclick="appendCharacter('ृ')">ृ</button>
+        <button onclick="appendCharacter('े')">े</button>
+        <button onclick="appendCharacter('ै')">ै</button>
+        <button onclick="appendCharacter('ो')">ो</button>
+        <button onclick="appendCharacter('ौ')">ौ</button>
+    </div>
+
+    <div class="eight row">
+        <button onclick="appendCharacter('॰')">॰</button>
+        <button onclick="appendCharacter('्')">्</button>
+        <button onclick="appendCharacter('ँ')">ँ</button>
+        <button onclick="appendCharacter('ं')">ं</button>
+        <button onclick="appendCharacter('ः')">ः</button>
+        <button onclick="appendCharacter('़')">़</button>
+        <button onclick="appendCharacter('ऽ')">ऽ</button>
+        <button onclick="appendCharacter('०')">०</button>
+    </div>
+    <div class="nine row">
+        <button class="space" onclick="appendCharacter(' ')">Space</button>
+    </div>
+    </div>
+</body>
+
+    <script>
+        function appendCharacter(character) {
+            var output = document.getElementById('output');
+            output.value += character;
+        }
+        function appendCharacterBackspace() {
+            var output = document.getElementById('output');
+            output.value = output.value.slice(0, -1);
+        }
+
+        function appendCharacterEnter() {
+            appendCharacter('\n');
+        }
+    </script>
+</html>

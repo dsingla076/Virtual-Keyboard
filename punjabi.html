@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punjai Virtual Keyboard</title>
+    <style>
+        body{
+        background-color: rgb(95, 158, 160); 
+        font-size: large;
+        font-family: sans-serif;
+        text-align: center;
+
+      
+    }
+    .textarea{
+        background: white;
+        width: 1100px;
+        height: 130px;
+        padding: 5px;
+        margin-left: 120px;
+        outline: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-family: sans-serif;
+        font-style:inherit;
+    }
+    .textarea, .container {
+        width: auto;
+        height: auto;
+            resize: both;
+            overflow: auto;
+           
+    }
+    
+    .first,.second,.third,.fourth,.fifth{
+        margin: 10px 20px 10px 300px;
+    }
+    button{
+        width: 50px;
+        height: 40px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .back{
+        width: 85px;
+    }
+    .tab{
+        width: 65px;
+    }
+    .slash{
+        width: 65px;
+    }
+    .cap{
+        width: 65px;
+    }
+    .etn{
+        width:65px ;
+    }
+    .leftshift{
+        width: 105px;
+    }
+    .rightshift{
+        width: 135px;
+    }
+    .space{
+        width: 400px;
+        margin-left: 180px;
+    }
+    button:hover {
+        background-color: lightgray;
+        transition: background-color 0.3s ease;
+    }
+    
+    .button:active {
+        box-shadow: 1px 1px 2px #fff8f8, -1px -1px 2px #474343;
+        background-color: #d6d6d6;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <h1 class="heading">Punjabi Virtual Keyboard</h1>
+    <textarea id="output" class="textarea"></textarea>
+    <div class="container">
+        <div class="row">
+              <button onclick="appendCharacter('~')">~</button>
+            <button onclick="appendCharacter('੧')">੧</button>
+            <button onclick="appendCharacter('੨')">੨</button>
+            <button onclick="appendCharacter('੩')">੩</button>
+            <button onclick="appendCharacter('੪')">੪</button>
+            <button onclick="appendCharacter('੫')">੫</button>
+            <button onclick="appendCharacter('੬')">੬</button>
+            <button onclick="appendCharacter('੭')">੭</button>
+            <button onclick="appendCharacter('੮')">੮</button>
+            <button onclick="appendCharacter('੯')">੯</button>
+            <button onclick="appendCharacter('੦')">੦</button>
+            <button onclick="appendCharacter('-')">-</button>
+            <button onclick="appendCharacter('=')">=</button>
+            <button class="back" onclick="appendCharacterBackspace()">Backspace</button>
+        </div>
+        <div class="row">
+            <button  class="tab"onclick="appendCharacter('tab')">tab</button>
+            <button onclick="appendCharacter('ਕ')">ਕ</button>
+            <button onclick="appendCharacter('ਖ')">ਖ</button>
+            <button onclick="appendCharacter('ਗ')">ਗ</button>
+            <button onclick="appendCharacter('ਘ')">ਘ</button>
+            <button onclick="appendCharacter('ਙ')">ਙ</button>
+            <button onclick="appendCharacter('ਚ')">ਚ</button>
+            <button onclick="appendCharacter('ਛ')">ਛ</button>
+            <button onclick="appendCharacter('ਜ')">ਜ</button>
+            <button onclick="appendCharacter('ਝ')">ਝ</button>
+            <button onclick="appendCharacter('ਞ')">ਞ</button>
+           
+            <button onclick="appendCharacter('[')">[</button>
+            <button onclick="appendCharacter(']')">]</button>
+            <button class="slash"  onclick="appendCharacter('/')">/</button>
+        </div>
+        <div class="row">
+            <button class="cap" onclick="toggleCapsLock()">Caps </button>
+            <button onclick="appendCharacter('ਤ')">ਤ</button>
+            <button onclick="appendCharacter('ਥ')">ਥ</button>
+            <button onclick="appendCharacter('ਦ')">ਦ</button>
+            <button onclick="appendCharacter('ਧ')">ਧ</button>
+            <button onclick="appendCharacter('ਨ')">ਨ</button>
+            <button onclick="appendCharacter('ਪ')">ਪ</button>
+            <button onclick="appendCharacter('ਫ')">ਫ</button>
+            <button onclick="appendCharacter('ਬ')">ਬ</button>
+            <button onclick="appendCharacter('ਭ')">ਭ</button>
+            <button onclick="appendCharacter('ਮ')">ਮ</button>
+            <button onclick="appendCharacter('ੜ')">ੜ</button>
+            <button onclick="appendCharacter('ਰ')">ਰ</button>
+            <button class="etn" onclick="appendCharacterEnter()">Enter</button>
+        </div>
+        <div class="row">
+            <button class="leftshift" onclick="toggleShift()">Shift</button>
+            <button onclick="appendCharacter('ਸ')">ਸ</button>
+            <button onclick="appendCharacter('ਹ')">ਹ</button>
+            <button onclick="appendCharacter('ਘ')">ਘ</button>
+            <button onclick="appendCharacter('ਗ')">ਗ</button>
+            <button onclick="appendCharacter('ਫ')">ਫ</button>
+            <button onclick="appendCharacter('ਕ਼')">ਕ਼</button>
+            <button onclick="appendCharacter('ੳ')">ੳ</button>
+            <button onclick="appendCharacter('ਅ')">ਅ</button>
+            <button onclick="appendCharacter('ਦੂ')">ਦੂ</button>
+            <button onclick="appendCharacter('ਾ')">ਾ</button>
+            <button class="rightshift" onclick="toggleShift()">Shift</button>
+        </div>
+        <div class="row">
+            <button class="space" onclick="appendCharacter(' ')">Space</button>
+        </div>
+    </div>
+
+    <script>
+        function appendCharacter(char) {
+            document.getElementById('output').value += char;
+        }
+
+        function appendCharacterBackspace() {
+            var output = document.getElementById('output');
+            output.value = output.value.slice(0, -1);
+        }
+
+        function appendCharacterEnter() {
+            appendCharacter('\n');
+        }
+    </script>
+           

@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(95, 158, 160); 
+    font-size: large;
+    font-family: sans-serif;
+  
+}
+.textarea{
+    background: white;
+    width: 1100px;
+    height: 130px;
+    padding: 5px;
+    margin-left: 120px;
+    outline: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-style:inherit;
+}
+.textarea, .container {
+    width: auto;
+    height: auto;
+        resize: both;
+        overflow: auto;
+       
+}
+
+.first,.second,.third,.fourth,.fifth{
+    margin: 10px 20px 10px 300px;
+}
+button{
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.back{
+    width: 85px;
+}
+.tab{
+    width: 65px;
+}
+.slash{
+    width: 65px;
+}
+.cap{
+    width: 90px;
+}
+.etn{
+    width:95px ;
+}
+.leftshift{
+    width: 105px;
+}
+.rightshift{
+    width: 135px;
+}
+.space{
+    width: 400px;
+    margin-left: 180px;
+}
+button:hover {
+    background-color: lightgray;
+    transition: background-color 0.3s ease;
+}
+
+.button:active {
+    box-shadow: 1px 1px 2px #fff8f8, -1px -1px 2px #474343;
+    background-color: #d6d6d6;
+}
+
